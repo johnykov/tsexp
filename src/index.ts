@@ -1,12 +1,14 @@
 import { log } from "console";
-import { asd } from "./external";
-
+import { external_instance } from "./external";
+import { sleep } from "./sleep";
+    
 (async () => {
-    log(asd);
+    log(external_instance);
 
-    const sleep = (ms: number) => new Promise(resolve => setTimeout(resolve, ms));
     console.log(1);
     await sleep(2000);
-    log('resolved promise', await asd);
+    const prom_res = await (external_instance.init())
+    log('resolved promise', prom_res)
+    log('resolved work', external_instance.work)
     console.log(2);
 })()

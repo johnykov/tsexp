@@ -1,15 +1,18 @@
 import { log } from "console";
 
-async function example() {
-    log('running example')
-    let promise = new Promise((resolve, reject) => {
-      setTimeout(() => resolve("done!"), 1000);
+function example() {
+    log('initialize')
+    const promise = new Promise((resolve, reject) => {
+      setTimeout(() => resolve("connection init done!"), 1000);
     });
   
-    let result = await promise; // wait till the promise resolves (*)
-  
-    log(result); // "done!"
-    return result
+    // let result = await promise; // wait till the promise resolves (*)
+  const work = "processing"
+    // log(result); // "done!"
+    return {
+      init: ()=>promise,
+      work
+    }
   }
   
-  export let asd = example();
+  export let external_instance = example();

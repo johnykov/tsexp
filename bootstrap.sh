@@ -17,6 +17,8 @@ npm init -y
 npm install -D @tsconfig/node21 tsx typescript @types/node
 mkdir src
 touch tsconfig.json
+npm i -S express
+npm i -D @types/express
 cat << EOF > .env
 PROPERTY=value
 EOF

@@ -4,6 +4,8 @@
     "allowJs": true,
     "outDir": "dist"
   },
-  "include": ["src/**/*"],
+  "include": [
+    "01dirty/src/**/*"
+  ],
   "exclude": ["node_modules"]
 }

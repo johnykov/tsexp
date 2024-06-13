@@ -14,6 +14,8 @@ npm init -y
 #slonik slonik-interceptor-field-name-transformation
 #todo
 # redisom
+#npm install fastify typeorm sqlite3
+#npm install -S typeorm sqlite3
 npm install -D @tsconfig/node21 tsx typescript @types/node
 mkdir src
 touch tsconfig.json
